@@ -8,9 +8,9 @@ import java.util.concurrent.Phaser;
 public class Main {
     public static void main(String[] args) {
         Phaser phaser=new Phaser(3);
-        FileSearch fileSearch1=new FileSearch("xxx","log",phaser);
-        FileSearch fileSearch2=new FileSearch("xxx","log",phaser);
-        FileSearch fileSearch3=new FileSearch("xxx","log",phaser);
+        FileSearch fileSearch1=new FileSearch("/var/log","log",phaser);
+        FileSearch fileSearch2=new FileSearch("/var/log","log",phaser);
+        FileSearch fileSearch3=new FileSearch("/var/log","log",phaser);
         Thread th1=new Thread(fileSearch1,"th1");
         th1.start();
         Thread th2=new Thread(fileSearch2,"th2");
