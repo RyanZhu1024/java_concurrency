@@ -24,6 +24,7 @@ public class VideoConference implements Runnable{
         try{
             /**
              * to redo the this conference, try thread pool
+             * no reset for countdownlatch, use cyclicBarrier
              */
             countDownLatch.await();
             System.out.println("all participants have arrived");
