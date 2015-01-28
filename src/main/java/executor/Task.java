@@ -14,11 +14,12 @@ public class Task implements Runnable {
 
     @Override
     public void run() {
-        System.out.println(this.name);
+        System.out.println(this.name+" is running");
         try {
-            TimeUnit.SECONDS.sleep(2L);
+            TimeUnit.SECONDS.sleep(5L);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        throw new RuntimeException();
     }
 }
