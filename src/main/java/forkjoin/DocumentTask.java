@@ -54,7 +54,7 @@ public class DocumentTask extends RecursiveTask<Integer> {
             LineTask lineTask = new LineTask(0, line.length, word, line);
             tasks.add(lineTask);
         }
-        invokeAll(tasks);
+        invokeAll(tasks);// synchronous call
         int result = 0;
         for (int i = 0; i < tasks.size(); i++) {
             try {
